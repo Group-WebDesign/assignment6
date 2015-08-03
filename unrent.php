@@ -17,7 +17,7 @@
 <?php
 
    
-	     $dbhost = "oniddb.cws.oregonstate.edu";
+	$dbhost = "oniddb.cws.oregonstate.edu";
       $dbname = "mcdoncam-db";
       $dbuser = "mcdoncam-db";
       $dbpass = "xOwqKHjWfOFiJdfA";

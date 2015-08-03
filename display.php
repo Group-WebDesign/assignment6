@@ -25,7 +25,7 @@
       <h1>Our Movie Database</h1>
       <hr>
       <div class="btn-group">
-        <a href="addmovie.php" class="btn btn-success" role="button">Add A Movie</a>
+        <a href="addmovie.html" class="btn btn-success" role="button">Add A Movie</a>
        <!-- <button type="button" class="btn btn-primary">Rent A Movie</button>
         <button type="button" class="btn btn-warning">Remove A Movie</button>-->
         <a href="removeall.php" role="button" class="btn btn-danger">Remove ALL Movie</a>

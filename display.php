@@ -80,7 +80,7 @@
 				if($row["rented"] == 0){
 					echo "<tr><td>" . $row["name"]. "</td><td>" . $row["category"]. "</td><td>". $row["length"]. "</td><td>" . $row["rented"]. "</td><td><a href='delete.php?name=" . $row["name"] . "'>Delete</a></td><td><a href='rent.php?name=" . $row["name"] . "'>Rent</a></td></tr>";
 				}else{
-										echo "<tr><td>" . $row["name"]. "</td><td>" . $row["category"]. "</td><td>". $row["length"]. "</td><td>" . $row["rented"]. "</td><td><a href='delete.php?name=" . $row["name"] . "'>Delete</a></td><td>Unavailable</td></tr>";
+										echo "<tr><td>" . $row["name"]. "</td><td>" . $row["category"]. "</td><td>". $row["length"]. "</td><td>" . $row["rented"]. "</td><td><a href='delete.php?name=" . $row["name"] . "'>Delete</a></td><td><a href='unrent.php?name=" . $row["name"] . "'>Return</a></td></tr>";
 				}	
 		   }
            echo "</table>";

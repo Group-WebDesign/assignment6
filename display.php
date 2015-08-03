@@ -58,10 +58,10 @@
       </style>
 
       <?php
-      $dbhost = "localhost";
-      $dbname = "videodb";
-      $dbuser = "root";
-      $dbpass = "";
+      $dbhost = "oniddb.cws.oregonstate.edu";
+      $dbname = "mcdoncam-db";
+      $dbuser = "mcdoncam-db";
+      $dbpass = "xOwqKHjWfOFiJdfA";
 
       
       $conn = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
@@ -70,7 +70,7 @@
         die("Connection failed: " . $conn->connect_error);
       } 
 
-      $sql = "SELECT name, category, length, rented FROM `videodb`.`videoinventory`";
+      $sql = "SELECT name, category, length, rented FROM `mcdoncam-db`.`videoinventory`";
       $result = $conn->query($sql);
 
       if ($result->num_rows > 0) {

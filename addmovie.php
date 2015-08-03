@@ -12,10 +12,10 @@
 <body>
   <?php
 
-    $dbhost = 'localhost';
-    $dbname = 'videodb';
-    $dbuser = 'root';
-    $dbpass = '';
+    $dbhost = "oniddb.cws.oregonstate.edu";
+      $dbname = "mcdoncam-db";
+      $dbuser = "mcdoncam-db";
+      $dbpass = "xOwqKHjWfOFiJdfA";
 
     $conn = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 
@@ -46,7 +46,7 @@
          echo "<br>";
          header("Location: addmovie.html");
       } else {
-        $input = "INSERT INTO `videodb`.`videoinventory` (`id`, `name`, `category`, `length`, `rented`) 
+        $input = "INSERT INTO `mcdoncam-db`.`videoinventory` (`id`, `name`, `category`, `length`, `rented`) 
         VALUES (NULL, '$name', '$category', '$length', '0')";
       }
       if(mysqli_query($conn, $input)) {

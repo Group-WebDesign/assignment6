@@ -16,10 +16,10 @@
 <body>
 	<?php
 
-	$dbhost = 'localhost';
-	$dbname = 'videodb';
-	$dbuser = 'root';
-	$dbpass = '';
+	      $dbhost = "oniddb.cws.oregonstate.edu";
+      $dbname = "mcdoncam-db";
+      $dbuser = "mcdoncam-db";
+      $dbpass = "xOwqKHjWfOFiJdfA";
 
 	$conn = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 

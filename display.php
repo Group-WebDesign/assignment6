@@ -26,8 +26,8 @@
       <hr>
       <div class="btn-group">
         <a href="addmovie.php" class="btn btn-success" role="button">Add A Movie</a>
-        <button type="button" class="btn btn-primary">Rent A Movie</button>
-        <button type="button" class="btn btn-warning">Remove A Movie</button>
+       <!-- <button type="button" class="btn btn-primary">Rent A Movie</button>
+        <button type="button" class="btn btn-warning">Remove A Movie</button>-->
         <a href="removeall.php" role="button" class="btn btn-danger">Remove ALL Movie</a>
         <div class="btn-group">
           <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
@@ -74,10 +74,10 @@
       $result = $conn->query($sql);
 
       if ($result->num_rows > 0) {
-           echo "<table><tr><th>Name</th><th>Category</th><th>Length <br>(minutes)</th><th>Status <br>(0=Available, 1= Rented)</th></tr>";
+           echo "<table><tr><th>Name</th><th>Category</th><th>Length <br>(minutes)</th><th>Status <br>(0=Available, 1= Rented)</th><th>Delete</th><th>Availability</th></tr>";
            // output data of each row
            while($row = $result->fetch_assoc()) {
-               echo "<tr><td>" . $row["name"]. "</td><td>" . $row["category"]. "</td><td>". $row["length"]. "</td><td>" . $row["rented"]. "</td></tr>";
+               echo "<tr><td>" . $row["name"]. "</td><td>" . $row["category"]. "</td><td>". $row["length"]. "</td><td>" . $row["rented"]. "</td><td><a href='delete.php?name=" . $row["name"] . "'>Delete</a></td><td><a href='rent.php?name=" . $row["name"] . "'>Rent</a></td></tr>";
            }
            echo "</table>";
       } else {

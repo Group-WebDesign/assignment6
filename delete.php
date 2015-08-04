@@ -17,12 +17,7 @@
 <?php
 
    
-	$dbhost = "oniddb.cws.oregonstate.edu";
-      $dbname = "mcdoncam-db";
-      $dbuser = "mcdoncam-db";
-      $dbpass = "xOwqKHjWfOFiJdfA";
-
-	$conn = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
+	include 'connect.php';
 	
 	if (!isset($_GET['name'])){
     echo 'No name was given...';

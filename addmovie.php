@@ -18,9 +18,12 @@
       die("Connection failed: " . mysqli_connect_error());
     }
 
+	  
     $filled = true;
     $required = array("name", "category", "length");
 
+	
+	
     foreach ($required as &$value) {
       if ($_POST[$value] == "") {
         $filled = false;
@@ -37,6 +40,8 @@
       $name = $_POST["name"];
       $category = $_POST["category"];
       $length = $_POST["length"];
+	  
+	  
 
       if (preg_match("/[^0-9]/",$length) || preg_match("/[^a-zA-Z]/",$category)) {
          $showErr = "Only positive numbers allowed for length and letters for category";

@@ -35,7 +35,7 @@
       $name = $_POST["name"];
       $category = $_POST["category"];
       $length = $_POST["length"];
-      if (preg_match("/[^0-9]/",$length) || preg_match("/[^a-z]/",$category)) {
+      if (preg_match("/[^0-9]/",$length) || preg_match("/[^a-zA-Z]/",$category)) {
          $showErr = "Only numbers allowed for length and letters for category";
          echo $lengthErr;
          echo "<br>";

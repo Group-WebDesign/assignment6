@@ -22,8 +22,10 @@
 		die("Connection failed: " . mysqli_connect_error());
 	}
 
-	mysqli_query($conn, 'TRUNCATE TABLE videoinventory;');
-
+	//mysqli_query($conn, 'TRUNCATE TABLE videoinventory;');
+	$stmt = $conn->prepare("TRUNCATE TABLE videoinventory;");
+	$stmt->execute();
+	
 	echo "Removal Success!";
 
 	?>

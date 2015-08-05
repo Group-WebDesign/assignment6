@@ -27,17 +27,20 @@
       }
     }
 
-    if (!$filled) {
-      header("Location: addmovie.html");
+    if ($filled == false) {
+      echo "Required field is missing, please retry";
+	  echo "<br>";
+	  header("Location: addmovie.html");
     }
     
     else {
       $name = $_POST["name"];
       $category = $_POST["category"];
       $length = $_POST["length"];
+
       if (preg_match("/[^0-9]/",$length) || preg_match("/[^a-zA-Z]/",$category)) {
-         $showErr = "Only numbers allowed for length and letters for category";
-         echo $lengthErr;
+         $showErr = "Only positive numbers allowed for length and letters for category";
+         echo $showErr;
          echo "<br>";
          header("Location: addmovie.html");
       } else {

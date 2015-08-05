@@ -27,7 +27,10 @@
 		die("Connection failed: " . mysqli_connect_error());
 	}
 
-	mysqli_query($conn, "DELETE FROM videoinventory WHERE name ='" . $_GET['name'] . "'");
+	$stmt = $conn->prepare("DELETE FROM videoinventory WHERE name = ?");
+	$stmt->bind_param("s", $name);
+	$name = $_GET["name"];
+	$stmt->execute();
 
 	echo "Removal Success!";
 

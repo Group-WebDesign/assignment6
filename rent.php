@@ -26,7 +26,11 @@
 	
 	
 	
-		mysqli_query($conn, "UPDATE videoinventory SET rented = 1 WHERE name ='" . $_GET["name"] . "'");
+		//mysqli_query($conn, "UPDATE videoinventory SET rented = 1 WHERE name ='" . $_GET["name"] . "'");
+		$stmt = $conn->prepare("UPDATE videoinventory SET rented = 1 WHERE name = ?");
+		$stmt->bind_param("s", $name);
+		$name = $_GET["name"];
+		$stmt->execute();
 		echo "Rental Success!";
 	
 ?>
